@@ -116,7 +116,7 @@ public final class Post: Content {
         
         //Mark the post as spoiler if the title contains a spoiler tag.
         //This is legacy for some old posts that have not been marked spoiler yet
-        //Reddit change: https://www.reddit.com/r/announcements/comments/5or86n/spoilers_tags_for_posts/
+        //Reddit change: https://www.yakker.app/r/announcements/comments/5or86n/spoilers_tags_for_posts/
         if let title = self.title?.lowercased() {
             let nonSpoilerWords = ["no spoiler", "not spoiler", "non spoiler", "no-spoiler", "not-spoiler", "non-spoiler"]
             let spoilerWords = ["spoiler"]

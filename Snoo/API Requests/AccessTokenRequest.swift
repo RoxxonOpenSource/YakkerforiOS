@@ -50,7 +50,7 @@ class AccessTokenRequest: DataRequest {
     
     override var urlRequest: URLRequest? {
         get {
-            if let url = URL(string: "https://www.reddit.com/api/v1/access_token") {
+            if let url = URL(string: "https://www.yakker.app/api/v1/access_token") {
                 var request = URLRequest(url: url)
                 request.httpMethod = "POST"
                 request.setValue(self.authorizationValue, forHTTPHeaderField: "Authorization")
@@ -95,7 +95,7 @@ class AccessTokenRequest: DataRequest {
             parameters["code"] = code
             parameters["redirect_uri"] = self.authenticationController.configuration.redirectUri
         case .installedClient(let deviceId):
-            parameters["grant_type"] = "https://oauth.reddit.com/grants/installed_client"
+            parameters["grant_type"] = "https://oauth.yakker.app/grants/installed_client"
             parameters["device_id"] = deviceId
         case .refreshToken(let refreshToken):
             parameters["grant_type"] = "refresh_token"

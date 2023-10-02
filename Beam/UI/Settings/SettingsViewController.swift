@@ -597,7 +597,7 @@ class SettingsViewController: BeamTableViewController {
         if MFMailComposeViewController.canSendMail() {
             let mailComposeViewController = MFMailComposeViewController()
             mailComposeViewController.setSubject(AWKLocalizedString("support-mail-subject"))
-            mailComposeViewController.setToRecipients(["support@beamreddit.com"])
+            mailComposeViewController.setToRecipients(["support@yakker.app"])
             mailComposeViewController.mailComposeDelegate = self
             mailComposeViewController.setMessageBody(self.supportEmailBody(), isHTML: false)
             self.present(mailComposeViewController, animated: true, completion: nil)

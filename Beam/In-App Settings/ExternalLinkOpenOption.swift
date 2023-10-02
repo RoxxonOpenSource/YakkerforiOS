@@ -162,7 +162,7 @@ public enum ExternalLinkOpenOption: String {
         
         //If the scheme and host are both empty, we assume it's a relative reddit link
         if urlComponents.scheme == nil && urlComponents.host == nil {
-            urlComponents.host = "reddit.com"
+            urlComponents.host = "yakker.app"
             urlComponents.scheme = "https"
         }
         
@@ -175,7 +175,7 @@ public enum ExternalLinkOpenOption: String {
         }
         
         //If the link is a relative to a reddit comments thread (/comments/) or multireddit (/m/) we send it to the internal link routing for handling
-        if urlComponents.host?.contains("reddit.com") == true && (urlComponents.path.contains("/comments/") || urlComponents.path.contains("/m/")) {
+        if urlComponents.host?.contains("yakker.app") == true && (urlComponents.path.contains("/comments/") || urlComponents.path.contains("/m/")) {
             urlComponents.scheme = "beam"
             if let beamUrl = urlComponents.url, InternalLinkRoutingController.shared.canRouteURL(beamUrl) {
                 if openImmediately {

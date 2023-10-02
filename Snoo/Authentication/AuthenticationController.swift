@@ -12,8 +12,8 @@ import CoreData
 public struct AuthenticationConfiguration {
     
     // MARK: API
-    public var regularHost = "www.reddit.com"
-    public var oauthHost = "oauth.reddit.com"
+    public var regularHost = "www.yakker.app"
+    public var oauthHost = "oauth.yakker.app"
     public var clientName: String
     public var clientVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0"
     
@@ -320,7 +320,7 @@ public final class AuthenticationController: NSObject {
         self.authorizationState = UUID().uuidString
 
         if let redirectString = URL.stringByAddingUrlPercentagesToString(self.configuration.redirectUri), let scopeString = URL.stringByAddingUrlPercentagesToString(self.configuration.scope), let state = authorizationState {
-            let urlString = "https://www.reddit.com/api/v1/authorize.compact?client_id=\(self.configuration.clientID)&response_type=code&state=\(state)&redirect_uri=\(redirectString)&duration=permanent&scope=\(scopeString)"
+            let urlString = "https://www.yakker.app/api/v1/authorize.compact?client_id=\(self.configuration.clientID)&response_type=code&state=\(state)&redirect_uri=\(redirectString)&duration=permanent&scope=\(scopeString)"
             let url = Foundation.URL(string: urlString)
             return url
         }

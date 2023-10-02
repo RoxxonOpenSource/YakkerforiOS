@@ -363,7 +363,7 @@
 
 "feedback-not-possible" = "Feedback not possible";
 
-"feedback-not-possible-message" = "It looks like you don't have access to any e-mail accounts in your default mail app. To send feedback, send an email to support@beamreddit.com";
+"feedback-not-possible-message" = "It looks like you don't have access to any e-mail accounts in your default mail app. To send feedback, send an email to support@yakker.app";
 
 "donate-thankyou-title" = "Thank you";
 
@@ -1385,7 +1385,7 @@
 "incorrect-captcha-error-title" = "Captcha required";
 
 /* The message shown when a captcha is required, this is fall back in case the server ever throws a bad captcha error */
-"incorrect-captcha-error-message" = "A captcha is required for your account. Please use reddit.com to perform this action.";
+"incorrect-captcha-error-message" = "A captcha is required for your account. Please use yakker.app to perform this action.";
 
 /* Title shown when the post was already submitted and can't be resubmitted */
 "already-submitted-not-possible-error-title" = "Duplicate";

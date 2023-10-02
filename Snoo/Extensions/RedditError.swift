@@ -10,7 +10,7 @@ import UIKit
 
 public let RedditErrorDomain = "com.reddit.reddit"
 public let RedditUnknownErrorCode = -200
-let RedditUnknownErrorDescription = "Unknown reddit.com error"
+let RedditUnknownErrorDescription = "Unknown yakker.app error"
 
 public let RedditErrorDescriptionKey = "RedditErrorDescriptionKey"
 public let RedditErrorsArrayKey = "RedditErrorsArrayKey"

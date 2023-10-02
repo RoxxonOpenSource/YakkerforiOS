@@ -15,7 +15,7 @@ struct Config {
     /// The Apple app identifier for the app store.
     static let appleAppID = "937987469"
     
-    /// The ID for the reddit client, registered at reddit.com.
+    /// The ID for the reddit client, registered at yakker.app.
     static let redditClientID = "YOUR REDDIT CLIENT ID"
     
     /// The client ID to communicate with the imgur API.

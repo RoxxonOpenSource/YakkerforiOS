@@ -19,7 +19,7 @@ final class URLShareItemProvider: UIActivityItemProvider {
     init(object: SyncObject) {
         self.object = object
         
-        guard let URL = object.redditUrl ?? URL(string: "https://reddit.com") else {
+        guard let URL = object.redditUrl ?? URL(string: "https://yakker.app") else {
             fatalError()
         }
         self.redditUrl = URL

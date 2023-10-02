@@ -31,22 +31,22 @@ class InternalLinkRoutingController: JLRoutes {
         //Subreddit routes, required parameter: name
         let subredditRoutes: [String] = ["subreddit/:name",
                                          "r/:name",
-                                         "reddit.com/r/:name"]
+                                         "yakker.app/r/:name"]
         self.addRoutes(subredditRoutes) { (parameters: [String: Any]?) -> Bool in
             return self.handleSubredditCallWithParameters(parameters)
         }
         //Multireddit routes, required parameter: username, multiredditname
         let multiredditRoutes: [String] = ["u/:username/m/:multiredditname",
                                  "user/:username/m/:multiredditname",
-                                 "reddit.com/user/:username/m/:multiredditname",
-                                 "reddit.com/u/:username/m/:multiredditname"]
+                                 "yakker.app/user/:username/m/:multiredditname",
+                                 "yakker.app/u/:username/m/:multiredditname"]
         self.addRoutes(multiredditRoutes) { (parameters: [String: Any]?) -> Bool in
             return self.handleMultiredditCallWithParameters(parameters)
         }
         //User routes, required parameter: username
         let userRoutes: [String] = ["user/:username",
                                     "u/:username",
-                                    "reddit.com/u/:username"]
+                                    "yakker.app/u/:username"]
         self.addRoutes(userRoutes) { (parameters: [String: Any]?) -> Bool in
             return self.handleUserCallWithParameters(parameters)
         }

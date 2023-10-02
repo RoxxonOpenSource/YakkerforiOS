@@ -34,7 +34,7 @@ public final class DataController: NSObject {
                                                                             NSInferMappingModelAutomaticallyOption: NSNumber(value: true as Bool),
                                                                             NSMigratePersistentStoresAutomaticallyOption: NSNumber(value: true as Bool)]
     
-    public var redditReachability: Reachability? = Reachability(hostname: "reddit.com")
+    public var redditReachability: Reachability? = Reachability(hostname: "yakker.app")
     
     override init() {
         super.init()
@@ -43,7 +43,7 @@ public final class DataController: NSObject {
         do {
             try self.redditReachability?.startNotifier()
         } catch {
-            NSLog("Failed to listen for reddit.com reachability")
+            NSLog("Failed to listen for yakker.app reachability")
         }
 
         let oldStorePath: String = self.applicationDocumentsDirectory.appendingPathComponent("Snoo.sqlite").path

@@ -21,7 +21,7 @@ extension Subreddit {
     }
     
     fileprivate func webpageURL() -> URL? {
-        let host = "www.reddit.com"
+        let host = "www.yakker.app"
         if self.identifier == Subreddit.frontpageIdentifier {
             return URL(string: "https://\(host)")
         }

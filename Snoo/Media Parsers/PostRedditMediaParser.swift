@@ -12,7 +12,7 @@ import CoreData
 final class PostRedditMediaParser: PostMediaParser {
 
     class func isRedditHosted(json: NSDictionary) -> Bool {
-        let redditHostedHosts = ["i.reddituploads.com", "i.reddit.com", "g.redditmedia.com", "i.redditmedia.com", "i.redd.it", "v.redd.it"]
+        let redditHostedHosts = ["uploads.yakker.app", "i.yakker.app", "g.yakker.app", "images.yakker.app", "media.yakker.app", "v.yakker.app"]
         guard let urlString = (json["url"] as? String)?.stringByUnescapeHTMLEntities(),
             let url = URL(string: urlString),
             let host = url.host,
@@ -27,7 +27,7 @@ final class PostRedditMediaParser: PostMediaParser {
             return self.parseMedia(for: post, json: crossPost)
         }
         guard PostRedditMediaParser.isRedditHosted(json: json), let objectContext = post.managedObjectContext else {
-            print("Skipping URL because not reddit hosted \(String(describing: json["url"] as? String))")
+            print("Skipping URL because not yakker hosted \(String(describing: json["url"] as? String))")
             return []
         }
         
